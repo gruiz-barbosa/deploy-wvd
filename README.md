@@ -7,7 +7,7 @@
 3- TenantCreator role must be assigned <br>
 4- VNET configured with Layer 3 access to DC/AAD DS <br>
 
-Configuring Terraform
+<b>Configuring Terraform</b>
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|

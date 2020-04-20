@@ -1,5 +1,13 @@
 # deploy-wvd
 
+Ensure that you meet the requirements for Windows Virtual Desktop.
+
+1- DC/AAD DS
+2- WVD tenant must be created
+3- TenantCreator role must be assigned
+4- VNET configured with Layer 3 access to DC/AAD DS
+
+Configuring Terraform
 
 | Name | Description | Type | Default | Required |
 |------|-------------|:----:|:-----:|:-----:|

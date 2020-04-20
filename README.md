@@ -2,10 +2,22 @@
 
 <b>Ensure that you meet the requirements for Windows Virtual Desktop.</b>
 
-1- DC/AAD DS <br>
-2- WVD tenant must be created <br>
-3- TenantCreator role must be assigned <br>
-4- VNET configured with Layer 3 access to DC/AAD DS <br>
+<b>1-</b> DC/AAD DS <br>
+<b>2-</b> WVD tenant must be created <br>
+<b>3-</b> TenantCreator role must be assigned <br>
+<b>4-</b> VNET configured with Layer 3 access to DC/AAD DS <br>
+
+<br>
+<br>
+<br>
+
+create_host_pool_personal <b> -> </b> Create an hostpool with vm per user<br>
+create_host_pool_pooled <b> -> </b> Create an hostpool with vm pool
+register_vm_hostpool <b> -> </b> Register an virtual machine in hostpool <br>
+
+<br>
+
+
 
 <b>Configuring Terraform</b>
 

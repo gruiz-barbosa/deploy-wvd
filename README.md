@@ -1,4 +1,4 @@
-# deploy-wvd
+# Deploy-wvd
 
 <b>Ensure that you meet the requirements for Windows Virtual Desktop.</b>
 

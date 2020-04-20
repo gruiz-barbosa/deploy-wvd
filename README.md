@@ -2,10 +2,10 @@
 
 Ensure that you meet the requirements for Windows Virtual Desktop.
 
-1- DC/AAD DS |
-2- WVD tenant must be created |
-3- TenantCreator role must be assigned |
-4- VNET configured with Layer 3 access to DC/AAD DS |
+1- DC/AAD DS <br>
+2- WVD tenant must be created <br>
+3- TenantCreator role must be assigned <br>
+4- VNET configured with Layer 3 access to DC/AAD DS <br>
 
 Configuring Terraform
 

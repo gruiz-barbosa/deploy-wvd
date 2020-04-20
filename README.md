@@ -8,9 +8,9 @@
 <b>4-</b> VNET configured with Layer 3 access to DC/AAD DS <br>
 
 <br>
-create_host_pool_personal <b> -> </b> Create an hostpool with vm per user<br>
-create_host_pool_pooled <b> -> </b> Create an hostpool with vm pool<br>
-register_vm_hostpool <b> -> </b> Register an virtual machine in hostpool <br>
+<b>create_host_pool_personal -> </b> Create an hostpool with vm per user<br>
+<b>create_host_pool_pooled -> </b> Create an hostpool with vm pool<br>
+<b>register_vm_hostpool -> </b> Register an virtual machine in hostpool <br>
 
 <br>
 

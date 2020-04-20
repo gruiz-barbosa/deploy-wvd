@@ -1,6 +1,6 @@
 # deploy-wvd
 
-Ensure that you meet the requirements for Windows Virtual Desktop.
+<b>Ensure that you meet the requirements for Windows Virtual Desktop.</b>
 
 1- DC/AAD DS <br>
 2- WVD tenant must be created <br>

@@ -45,8 +45,8 @@ resource "azurerm_virtual_machine" "main" {
     name              = "${lower(var.vm_prefix)}-${count.index + 1}"
     caching           = "ReadWrite"
     create_option     = "FromImage"
-    managed_disk_type = "Premium_LRS"
-    disk_size_gb      = "128"
+    managed_disk_type = "Standard_LRS"
+    disk_size_gb      = "64"
   }
 
   os_profile {

@@ -5,18 +5,18 @@ provider "azurerm" {
 
 resource "azurerm_virtual_machine_extension" "domainJoin" {
 
-  count                      = "${var.rdsh_count}"
-  name                       = "${var.vm_prefix}-${count.index + 1}"
-  virtual_machine_id         = "${azurerm_virtual_machine.main.*.id[count.index]}"
+  count                      = var.rdsh_count
+  name                       = "${var.vm_prefix}-${count.index + 1}-dj"
+  virtual_machine_id         = azurerm_virtual_machine.main.*.id[count.index]
   publisher                  = "Microsoft.Compute"
   type                       = "JsonADDomainExtension"
   type_handler_version       = "1.3"
   auto_upgrade_minor_version = true
-  
+
   lifecycle {
     ignore_changes = [
-      "settings",
-      "protected_settings",
+      (settings),
+      (protected_settings),
     ]
   }
 
@@ -39,14 +39,14 @@ PROTECTED_SETTINGS
 }
 
 resource "azurerm_virtual_machine_extension" "additional_session_host_dscextension" {
-  count                      = "${var.extension_custom_script ? var.rdsh_count : 0}"
+  count                      = var.extension_custom_script ? var.rdsh_count : 0
   name                       = "${var.vm_prefix}${count.index + 1}"
-  virtual_machine_id         = "${azurerm_virtual_machine.main.*.id[count.index]}"
+  virtual_machine_id         = azurerm_virtual_machine.main.*.id[count.index]
   publisher                  = "Microsoft.Powershell"
   type                       = "DSC"
   type_handler_version       = "2.73"
   auto_upgrade_minor_version = true
-  depends_on                 = ["azurerm_virtual_machine_extension.domainJoin"]
+  depends_on                 = [azurerm_virtual_machine_extension.domainJoin]
 
   settings = <<SETTINGS
 {
